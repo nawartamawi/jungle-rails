@@ -26,4 +26,9 @@ class ApplicationController < ActionController::Base
   def authorize
     redirect_to '/login' unless current_user
   end
+
+  # def admin_auth
+  #   http_basic_authenticate_with name: "Jungle", password: "book", except: :index
+  # end 
+  # helper_method :admin_auth
 end
