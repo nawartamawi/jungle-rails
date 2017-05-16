@@ -79,6 +79,5 @@ RSpec.describe User, type: :model do
       user = User.authenticate_with_credentials('nawar@googlE.com', '123456')
       expect(user).to eql(@user)
     end
-
   end 
 end
