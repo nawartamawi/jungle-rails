@@ -20,6 +20,7 @@ RSpec.feature "vistor Add To Cart ", type: :feature, js: true do
       visit root_path
       first('article.product').find_link('Add').click
       visit '/cart'
+      expect(page).to have_css '.table.table-bordered'
       # DEBUG / VERIFY
       save_screenshot
     end

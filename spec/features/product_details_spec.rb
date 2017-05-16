@@ -22,6 +22,7 @@ RSpec.feature "Visitor navigates to Product details page", type: :feature, js: t
     first('article.product').find_link('Details').click
     # DEBUG / VERIFY
     sleep(5)
+    expect(page).to have_css '.product-detail'
     save_screenshot 'testing.png'
   end
 
